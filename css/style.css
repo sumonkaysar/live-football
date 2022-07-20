@@ -173,15 +173,15 @@ main .container{
   margin-bottom: 0;
   display: none;
 }
-.social-sites{
+.social-icons{
   display: flex;
   justify-content: center;
   gap: 50px;
   margin-top: 50px;
 }
-.social-sites a{
+.social-icons a{
   color: var(--secondary-color);
-  font-size: 3g0px;
+  font-size: 30px;
 }
 
 /*--------------
@@ -304,11 +304,11 @@ footer hr{
   .hidden-blog{
     display: none;
   }
-  .social-sites{
+  .social-icons{
     gap: 10px;
     flex-wrap: wrap;
   }
-  .social-sites a{
+  .social-icons a{
     font-size: 20px;
   }
 }
