@@ -7,7 +7,26 @@
   --secondary-color: #FFFFFF;
   --primary-bg: #161616;
   --secondary-bg: #FFFFFF;
-  --btn-bg: #DD0000;
+  /* --btn-bg: #DD0000; */
+  --btn-bg: #007ddd;
+}
+
+/* animations */
+@keyframes left-to-right {
+  from{
+    transform: translateX(-1000px);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+@keyframes right-to-left {
+  from{
+    transform: translateX(1000px);
+  }
+  to{
+    transform: translateX(0);
+  }
 }
 
 /* Utilities */
@@ -41,12 +60,16 @@ header .container{
   border-radius: 30px;
   align-items: center;
   padding: 30px 0;
+  overflow: hidden;
 }
 .split-item{
   width: 45%;
 }
 .header-details{
   margin-left: 6%;
+}
+header:hover .header-details{
+  animation: left-to-right 1s;
 }
 .header-title{
   font-weight: 700;
@@ -59,6 +82,9 @@ header .container{
 .header-banner{
   align-self: flex-end;
   text-align: center;
+}
+header:hover .header-banner{
+  animation: right-to-left 1s;
 }
 .banner-img{
   width: 85%;
@@ -75,9 +101,14 @@ header .container{
   padding: 16px 25px;
   margin-top: 30px;
   margin-bottom: 50px;
+  transition: background-color 0.4s ease-in, color 0.4s ease-in;
 }
 .watch-live-btn .fa-angle-right{
   margin-left: 10px;
+}
+.watch-live-btn:hover{
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 /*------------
@@ -111,6 +142,7 @@ main .container{
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: opacity .3s ease-in;
 }
 .tabs ul li a{
   text-decoration: none;
@@ -126,6 +158,9 @@ main .container{
 .tabs ul li.current-tab a{
   color: var(--secondary-color);
 }
+.tabs ul li:hover{
+  opacity: 0.85;
+}
 /* blogs */
 .grid{
   display: grid;
@@ -136,12 +171,25 @@ main .container{
   border: 1px solid #E8E8E8;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
+  transition: opacity .4s;
+}
+.blog:hover{
+  opacity: 0.85;;
+}
+.blog-banner{
+  transition: transform 0.4s ease-in-out;
 }
 .blog-banner img{
+  border-radius: 10px 10px 0 0;
   width: 100%;
 }
 .blog-details{
   margin: 20px;
+  transition: transform 0.4s ease-in-out;
+}
+.blog:hover .blog-banner, .blog:hover .blog-details{
+  transform: scale(.9);
 }
 .blog-details p span{
   border: 1px solid #161616;
@@ -164,6 +212,7 @@ main .container{
 .blog-info span{
   color: #161616B2;
 }
+/* view all blogs */
 .view-all-blogs-wrapper{
   text-align: center;
 }
@@ -247,6 +296,9 @@ footer hr{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+  }
+  .header-banner{
+    align-self: center;
   }
   .banner-img{
     width: 60%;
