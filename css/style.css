@@ -128,7 +128,6 @@ main .container{
 }
 /* blogs */
 .grid{
-  /* flex: auto; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 24px;
