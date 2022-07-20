@@ -1,0 +1,35 @@
+/*----------------------
+  Upcoming Match section
+  ---------------------- */
+.upcoming-match{
+  text-align: center;
+  border: 1px solid #E8E8E8;
+  border-radius: 10px;
+  padding: 50px 30px;
+  height: fit-content;
+}
+.match-between{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.match-between div{
+  flex: 1;
+}
+.match-between div img{
+  width: 100%;
+}
+.match-between span{
+  font-weight: 700;
+}
+.upcoming-match h4{
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.upcoming-match p{
+  color: #4D4D4D;
+  margin: 0;
+}

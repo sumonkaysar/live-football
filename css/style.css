@@ -127,7 +127,7 @@ main .container{
   color: var(--secondary-color);
 }
 /* blogs */
-.blogs{
+.grid{
   /* flex: auto; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -278,7 +278,7 @@ footer hr{
   }
 
   /* blogs */
-  .blogs{
+  .grid{
     grid-template-columns: 1fr;
   }
 
@@ -352,7 +352,7 @@ footer hr{
     padding: 17px 20px;
   }
   /* blogs */
-  .blogs{
+  .grid{
     grid-template-columns: repeat(2, 1fr);
   }
   .view-all-blogs-btn{
