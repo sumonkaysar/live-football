@@ -1,9 +1,266 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* Custom Properties */
+:root{
+  --primary-color: #161616;
+  --secondary-color: #FFFFFF;
+  --primary-bg: #161616;
+  --secondary-bg: #FFFFFF;
+  --btn-bg: #DD0000;
+}
+
 /* Utilities */
 body{
   font-family: 'Poppins', sans-serif;
+  color: var(--primary-color);
+  background-color: var(--secondary-bg);
+  margin: 0;
+  margin-bottom: 0;
+}
+.container{
+  display: flex;
+  width: 1320px;
+  margin: 0 auto;
 }
 
-/*  */
+/*--------------
+  header section
+  -------------- */
+header{
+  margin-top: 50px;
+}
+header .container{
+  color: var(--secondary-color);
+  background-color: var(--primary-bg);
+  border-radius: 30px;
+  align-items: center;
+  padding: 30px 0;
+}
+.split-item{
+  width: 50%;
+}
+.header-details{
+  margin-left: 100px;
+}
+.banner-img{
+  width: 100%;
+  position: relative;
+  transform: scale(1.15);
+  top: -10px;
+}
+.header-title{
+  font-weight: 700;
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+.header-info{
+  margin: 0;
+}
+.watch-live-btn{
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  background-color: var(--btn-bg);
+  border-radius: 5px;
+  display: inline-block;
+  padding: 16px 25px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.watch-live-btn .fa-angle-right{
+  margin-left: 10px;
+}
+
+/*------------
+  Main section
+  ------------ */
+main{
+  margin: 130px 0;
+}
+main .container{
+  gap: 24px;
+}
+.tabs{
+  border-radius: 10px;
+  background-color: var(--primary-bg);
+  margin: 0;
+  height: fit-content;
+}
+.tabs ul{
+  width: 260px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 30px;
+  padding: 10px;
+}
+.tabs ul li{
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  text-align: center;
+}
+.tabs ul li a{
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 20px;
+  display: inline-block;
+  padding: 17px 30px;
+}
+.tabs ul li.current-tab{
+  background-color: var(--btn-bg);
+}
+.tabs ul li.current-tab a{
+  color: var(--secondary-color);
+}
+/* blogs */
+.blogs{
+  /* flex: auto; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+}
+.blog{
+  border: 1px solid #E8E8E8;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.blog-banner img{
+  width: 100%;
+}
+.blog-details{
+  margin: 20px;
+}
+.blog-details p span{
+  border: 1px solid #161616;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 4px 16px;
+}
+.blog-details h3{
+  font-weight: 600;
+  font-size: 18px;
+}
+.blog-info{
+  display: flex;
+  gap: 30px;
+}
+.blog-info div{
+  display: flex;
+  gap: 10px;
+}
+.blog-info span{
+  color: #161616B2;
+}
+
+/*--------------
+  Footer Section
+  -------------- */
+footer{
+  background-color: var(--primary-bg);
+  padding: 130px 0;
+  text-align: center;
+}
+footer .container{
+  display: block;
+}
+footer h1{
+  font-weight: 600;
+  font-size: 40px;
+  color: var(--secondary-color);
+}
+footer hr{
+  border: none;
+  border-bottom: 1px solid #FFFFFF1a;
+  margin: 50px 0;
+}
+.footer-menu ul{
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+.footer-menu ul li a{
+  text-decoration: none;
+  font-weight: 500;
+  color: #B9B9B9;
+}
+
+/*-----------
+  Mobile view
+  ----------- */
+@media (max-width: 640px) {
+  /* header */
+  .container{
+    flex-direction: column;
+    width: 350px;
+  }
+  header .container{
+    gap: 0;
+    padding: 0;
+  }
+  .split-item{
+    width: 100%;
+  }
+  .header-details{
+    text-align: center;
+    margin: 0px 15px;
+    padding-top: 20px;
+  }
+  .header-title{
+    font-size: 22px;
+  }
+  .header-info{
+    font-size: 14px;
+  }
+  .banner-img{
+    top: -20px;
+  }
+  .watch-live-btn{
+    margin-bottom: 25px;
+  }
+
+  /*------------
+    Main Section
+    ------------ */
+  main{
+    margin: 24px 0;
+  }
+  /* tabs */
+  .tabs{
+    background-color: var(--secondary-bg);
+  }
+  .tabs ul{
+    margin: 0 auto;
+  }
+  .tabs ul li{
+    border: 1px solid #E8E8E8;
+  }
+
+  /* blogs */
+  .blogs{
+    grid-template-columns: 1fr;
+  }
+
+  /* footer */
+  footer{
+    padding: 24px 0;
+  }
+  footer h1{
+    font-size: 22px;
+  }
+  footer hr{
+    margin: 24px 0;
+  }
+  .footer-menu ul{
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 30px;
+  }
+  .footer-menu ul li a{
+    font-size: 14px;
+  }
+}
